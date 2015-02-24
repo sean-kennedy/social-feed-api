@@ -4,6 +4,12 @@ An API to aggregate all your social media content into one place. Takes care of 
 
 Includes API cache to keep things quick.
 
+### Installation
+
+`npm install`
+
+Add appropriate credentials to `services/credentials.js`.
+
 ### Routes
 
 - `GET /feed`: Facebook, Twitter and YouTube content combined in chronological order.

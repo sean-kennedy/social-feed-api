@@ -9,7 +9,7 @@ var express = require('express'),
 	apicache_time = '5 minutes',
 	port = process.env.PORT || 5050;
 
-// FACEBOOK
+// Facebook
 app.get('/facebook', apicache(apicache_time), function(req, res) {
 	
 	facebookService.getPosts(req.query.user).then(function(data) {
@@ -20,7 +20,7 @@ app.get('/facebook', apicache(apicache_time), function(req, res) {
 
 });
 
-// TWITTER
+// Twitter
 app.get('/twitter', apicache(apicache_time), function(req, res) {
 	
 	twitterService.getPosts(req.query.user).then(function(data) {
@@ -31,8 +31,7 @@ app.get('/twitter', apicache(apicache_time), function(req, res) {
 
 });
 
-
-// YOUTUBE
+// Youtube
 app.get('/youtube', apicache(apicache_time), function(req, res) {
 	
 	youtubeService.getPosts(req.query.user).then(function(data) {

@@ -10,6 +10,8 @@ Includes API cache to keep things quick.
 
 Add appropriate credentials to `services/credentials.js`.
 
+Fire up `localhost:5050` to see the API in action.
+
 ### Routes
 
 - `GET /feed`: Facebook, Twitter and YouTube content combined in chronological order.

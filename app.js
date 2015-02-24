@@ -5,7 +5,7 @@ var express = require('express'),
 	facebookService = require('./services/facebookService.js'),
 	twitterService = require('./services/twitterService.js'),
 	youtubeService = require('./services/youtubeService.js'),
-	apicache = require('apicache').options({ debug: false, enabled: false }).middleware,
+	apicache = require('apicache').options({ debug: false, enabled: true }).middleware,
 	apicache_time = '5 minutes',
 	port = process.env.PORT || 5050;
 

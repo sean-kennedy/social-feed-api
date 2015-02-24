@@ -6,7 +6,7 @@ Includes API cache to keep things quick.
 
 ### Routes
 
-`GET /feed` - Facebook, Twitter and YouTube content combined in chronological order.
-`GET /facebook` - Facebook content.
-`GET /twitter` - Twitter content.
-`GET /youtube` - YouTube content.
+- `GET /feed`: Facebook, Twitter and YouTube content combined in chronological order.
+- `GET /facebook`: Facebook content.
+- `GET /twitter`: Twitter content.
+- `GET /youtube`: YouTube content.

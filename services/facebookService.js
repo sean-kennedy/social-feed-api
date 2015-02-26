@@ -35,12 +35,14 @@ function getPosts(user) {
 			
 					if (error && response.statusCode !== 200) deferredImages.reject('Image not found');
 					
+					var text_html = post.message.replace(/((http)+(s)?:\/\/[^<>\s]+)/i, '<a href="$1" target="_blank">$1</a>');
+					
 					newPost.id = post.id;
-					newPost.message = post.message;
+					newPost.text = post.message;
+					newPost.text_html = text_html;
 					newPost.user = userId;
 					newPost.source = 'facebook';
 					newPost.date = post.created_time;
-					//newPost.date_stamp = moment.unix(newPost.date).format('DD/MM/YYYY HH:mm:ss');
 					newPost.date_stamp = moment(moment.unix(newPost.date), moment.ISO_8601);
 					newPost.image = body.source;
 					

@@ -23,9 +23,12 @@ function getPosts(user) {
 		body.items.forEach(function(post) {
 			
 			var newPost = {};
+	
+			var text_html = post.snippet.title.replace(/((http)+(s)?:\/\/[^<>\s]+)/i, '<a href="$1" target="_blank">$1</a>');
 			
 			newPost.id = post.id.videoId;
-			newPost.message = post.snippet.title;
+			newPost.text = post.snippet.title;
+			newPost.text_html = text_html;
 			newPost.user = post.snippet.channelTitle;
 			newPost.source = 'youtube';
 			newPost.date = new Date(Date.parse(post.snippet.publishedAt)).getTime()/1000;

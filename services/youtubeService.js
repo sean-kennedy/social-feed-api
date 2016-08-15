@@ -24,7 +24,7 @@ function getPosts(user) {
 			
 			var newPost = {};
 	
-			var text_html = post.snippet.title.replace(/((http)+(s)?:\/\/[^<>\s]+)/i, '<a href="$1" target="_blank">$1</a>');
+			var text_html = post.snippet.title.replace(/((http)+(s)?:\/\/[^<>\s]+)/g, '<a href="$1" target="_blank">$1</a>');
 			
 			newPost.id = post.id.videoId;
 			newPost.text = post.snippet.title;

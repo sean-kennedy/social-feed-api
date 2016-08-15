@@ -25,9 +25,9 @@ function getPosts(user) {
 			
 			var newPost = {};
 			
-			var text_html = post.text.replace(/((http)+(s)?:\/\/[^<>\s]+)/i, '<a href="$1" target="_blank">$1</a>');
-			text_html = text_html.replace(/[@]+([A-Za-z0-9-_]+)/, '<a href="http://twitter.com/$1" target="_blank">@$1</a>');
-			text_html = text_html.replace(/[#]+([A-Za-z0-9-_]+)/, '<a href="http://twitter.com/search?q=%23$1" target="_blank">#$1</a>');
+			var text_html = post.text.replace(/((http)+(s)?:\/\/[^<>\s]+)/g, '<a href="$1" target="_blank">$1</a>');
+			text_html = text_html.replace(/[@]+([A-Za-z0-9-_]+)/g, '<a href="http://twitter.com/$1" target="_blank">@$1</a>');
+			text_html = text_html.replace(/[#]+([A-Za-z0-9-_]+)/g, '<a href="http://twitter.com/search?q=%23$1" target="_blank">#$1</a>');
 			
 			newPost.id = post.id.toString();
 			newPost.text = post.text;

@@ -14,7 +14,8 @@ function getPosts(user) {
 	if (!userId) deferred.reject('No user specified');
 	
 	request({
-		uri: 'https://graph.facebook.com/' + userId + '/promotable_posts?type=PHOTO&date_format=U&access_token=' + fb_app_id + '|' + fb_app_secret,
+		//uri: 'https://graph.facebook.com/' + userId + '/promotable_posts?type=PHOTO&date_format=U&access_token=' + fb_app_id + '|' + fb_app_secret,
+		uri: 'https://graph.facebook.com/v2.7/' + userId + '/feed?access_token=' + fb_app_id + '|' + fb_app_secret,
 		json: true
 	}, function(error, response, body) {
 		
